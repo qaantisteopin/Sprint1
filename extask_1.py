@@ -36,8 +36,3 @@ def create_dict(types_dict, tickets_dict):
     for key in sorted(types_dict.keys()):
         tickets_by_type[types_dict[key]] = tickets_dict[key]
     return tickets_by_type
-
-
-tickets_dict_without_duplicates = delete_duplicates(tickets)
-tickets_result = create_dict(types, tickets_dict_without_duplicates)
-print(tickets_result)

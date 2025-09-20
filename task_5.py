@@ -17,7 +17,12 @@ class TestCase:
     def get_test_case(self):
         print("{")
         print("    'Шаги': {")
-        print(f"            {step_num}: '{step_text}'")
+        sorted_steps = sorted(self.steps.items())
+        for i, (step_num, step_text) in enumerate(sorted_steps):
+            if i < len(sorted_steps) - 1:
+                print(f"            {step_num}: '{step_text}', ")
+            else:
+                print(f"            {step_num}: '{step_text}'")
         print("    }, ")
         print(f"    'Ожидаемый результат': '{self.result}'")
         print("}")

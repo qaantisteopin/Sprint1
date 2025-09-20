@@ -6,6 +6,7 @@ world_champions = {
     2018: "Франция",
 }
 world_champions[2022] = "Аргентина"
+
 for i in range(len(list(world_champions))):
     print(list(world_champions.keys())[i], "-", list(world_champions.values())[i])
 
